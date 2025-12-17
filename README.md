@@ -24,6 +24,3 @@ Update `TEST_REPO_URL` in your Python script:
 ```python
 TEST_REPO_URL = "https://github.com/YOUR_USERNAME/GitHub-Actions-Test"
 ```
-
-Then run your script to analyze the failures.
-```
