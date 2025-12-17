@@ -1,0 +1,14 @@
+name: Environment Variable Error
+on: [push]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use missing env var
+        run: |
+          echo "API Key: ${{ secrets.MISSING_API_KEY }}"
+          if [ -z "${{ secrets.MISSING_API_KEY }}" ]; then
+            echo "Error: MISSING_API_KEY is not set"
+            exit 1
+          fi

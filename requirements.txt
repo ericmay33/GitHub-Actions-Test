@@ -1,0 +1,2 @@
+# Intentionally missing pandas and requests
+pytest==7.4.0
